@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="Srg-Zf-JbH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="Srg-Zf-JbH" customClass="TableViewCell" customModule="FinanceRanking" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Srg-Zf-JbH" id="D0O-py-SUb">
@@ -81,6 +81,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="iconImageView" destination="mmd-9q-lT8" id="maw-er-eOf"/>
+                                    <outlet property="nameLabel" destination="nWa-Jb-OxS" id="Jv6-j6-hbB"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="pvq-U8-hlH"/>
                                 </connections>
                             </tableViewCell>

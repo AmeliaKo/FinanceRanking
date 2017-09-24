@@ -11,10 +11,11 @@ import ObjectMapper
 
 struct Feed  : Mappable {
     var author : Author!
+    var entryList : [AppEntry]!
     
     init?(map: Map) {
         author <- map["author"]
-        print(author)
+        entryList <- map["entry"]
     }
     
     mutating func mapping(map: Map) {
@@ -33,6 +34,20 @@ struct Author : Mappable {
     mutating func mapping(map: Map) {
          name <- map["name"]
          uri <- map["uri"]
+    }
+}
+
+struct AppEntry : Mappable {
+    var name : Label!
+    var imageList : [Label]!
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        name <- map["im:name"]
+        imageList <- map["im:image"]
     }
 }
 

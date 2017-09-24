@@ -7,4 +7,5 @@ target 'FinanceRanking' do
 
   # Pods for FinanceRanking
   pod 'ObjectMapper'
+  pod 'SDWebImage'
 end
