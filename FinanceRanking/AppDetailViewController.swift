@@ -11,13 +11,15 @@ import UIKit
 class AppDetailViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    let appId : Int64! = 0
+    var appId : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        HttpProtocolManager.shared.requestAppDetail { () in
+            
+        }
     }
     
     override func didReceiveMemoryWarning() {
