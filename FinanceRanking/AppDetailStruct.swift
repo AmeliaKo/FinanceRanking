@@ -17,6 +17,7 @@ class AppDetailStruct {
 
 struct Detail  : Mappable {
     var appDescription : String!
+    var screenshotUrls : [String]!
     
     init?(map: Map) {
         
@@ -24,5 +25,6 @@ struct Detail  : Mappable {
     
     mutating func mapping(map: Map) {
         appDescription <- map["description"]
+        screenshotUrls <- map["screenshotUrls"]
     }
 }
