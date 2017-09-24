@@ -15,41 +15,15 @@ enum JSONError: String, Error {
 }
 
 class RootTableViewController: UITableViewController {
-  var feed : Feed!
     
    override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        let url = URL(string: "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json")
-        
-        var request = URLRequest.init(url: url!)
-        request.httpMethod = "POST" // POST ,GET, PUT What you want
-        
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest) {data,response,error in
-            do {
-                guard let data = data else {
-                    throw JSONError.NoData
-                }
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-                self.feed = Mapper<Feed>().map(JSON: json["feed"] as! [String: Any])
-                print(self.feed!)
-                
-                DispatchQueue.main.sync {
-                    self.tableView.reloadData()
-                }
-            } catch let error as NSError {
-                print(error.localizedDescription)
+        HttpProtocolManager.shared.requestFinanceAppList { (isComplete) in
+            if(isComplete) {
+                self.tableView.reloadData()
             }
-            
         }
-        dataTask.resume()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,20 +40,31 @@ class RootTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if(self.feed != nil) {
-            return self.feed.entryList.count
-        }
         return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
 
-        let url = URL.init(string: self.feed.entryList[indexPath.row].imageList[0].label)
-        cell.imageView?.sd_setImage(with: url)
-        cell.nameLabel.text = self.feed.entryList[indexPath.row].name.label
+//        let url = URL.init(string: self.feed.entryList[indexPath.row].imageList[0].label)
+//        cell.imageView?.sd_setShowActivityIndicatorView(true)
+//        cell.imageView?.sd_setIndicatorStyle(.gray)
+//        cell.imageView?.sd_setImage(with: url, placeholderImage: nil, completed: { (loadedImage, error, cacheType, url) in
+//            cell.imageView?.sd_removeActivityIndicator()
+//            if error != nil {
+//                print(error!.localizedDescription)
+//            } else {
+//                cell.imageView?.image = loadedImage
+//            }
+//        })
+//
+//        cell.nameLabel.text = self.feed.entryList[indexPath.row].name.label
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
 

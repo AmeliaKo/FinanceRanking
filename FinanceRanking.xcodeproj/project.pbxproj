@@ -15,6 +15,8 @@
 		CB1D7BF91F7683130077FD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1D7BF71F7683130077FD66 /* LaunchScreen.storyboard */; };
 		CB27172F1F76943C001712F4 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27172E1F76943C001712F4 /* RootTableViewController.swift */; };
 		CB3907801F776C6F00D5B6EE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39077F1F776C6F00D5B6EE /* Utils.swift */; };
+		CB3907821F7796D300D5B6EE /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */; };
+		CB3907861F779D7A00D5B6EE /* HttpProtocolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CB1D7BFA1F7683130077FD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB27172E1F76943C001712F4 /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		CB39077F1F776C6F00D5B6EE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpProtocolManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				CB1D7BFA1F7683130077FD66 /* Info.plist */,
 				CB27172E1F76943C001712F4 /* RootTableViewController.swift */,
 				CB39077F1F776C6F00D5B6EE /* Utils.swift */,
+				CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */,
+				CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */,
 			);
 			path = FinanceRanking;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB1D7BF11F7683130077FD66 /* ViewController.swift in Sources */,
+				CB3907821F7796D300D5B6EE /* AppDetailViewController.swift in Sources */,
 				CB27172F1F76943C001712F4 /* RootTableViewController.swift in Sources */,
 				CB1D7BEF1F7683130077FD66 /* AppDelegate.swift in Sources */,
 				CB3907801F776C6F00D5B6EE /* Utils.swift in Sources */,
+				CB3907861F779D7A00D5B6EE /* HttpProtocolManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
