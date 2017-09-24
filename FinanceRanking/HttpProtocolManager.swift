@@ -51,9 +51,11 @@ class HttpProtocolManager {
                 guard let data = data else {
                     throw JSONError.NoData
                 }
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-               
                 
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                let object =  json["results"] as! [[String:Any]]
+                
+                AppDetailStruct.shared.detail = Mapper<Detail>().map(JSON:object[0])
                 
                 completion()
                 

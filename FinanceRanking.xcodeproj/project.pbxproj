@@ -17,6 +17,7 @@
 		CB3907801F776C6F00D5B6EE /* FeedStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39077F1F776C6F00D5B6EE /* FeedStructs.swift */; };
 		CB3907821F7796D300D5B6EE /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */; };
 		CB3907861F779D7A00D5B6EE /* HttpProtocolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */; };
+		CB39078A1F77D20600D5B6EE /* AppDetailStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3907891F77D20600D5B6EE /* AppDetailStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CB39077F1F776C6F00D5B6EE /* FeedStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStructs.swift; sourceTree = "<group>"; };
 		CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
 		CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpProtocolManager.swift; sourceTree = "<group>"; };
+		CB3907891F77D20600D5B6EE /* AppDetailStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				CB39077F1F776C6F00D5B6EE /* FeedStructs.swift */,
 				CB3907811F7796D300D5B6EE /* AppDetailViewController.swift */,
 				CB3907851F779D7A00D5B6EE /* HttpProtocolManager.swift */,
+				CB3907891F77D20600D5B6EE /* AppDetailStruct.swift */,
 			);
 			path = FinanceRanking;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				CB27172F1F76943C001712F4 /* RootTableViewController.swift in Sources */,
 				CB1D7BEF1F7683130077FD66 /* AppDelegate.swift in Sources */,
 				CB3907801F776C6F00D5B6EE /* FeedStructs.swift in Sources */,
+				CB39078A1F77D20600D5B6EE /* AppDetailStruct.swift in Sources */,
 				CB3907861F779D7A00D5B6EE /* HttpProtocolManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

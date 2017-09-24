@@ -18,7 +18,9 @@ class AppDetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         HttpProtocolManager.shared.requestAppDetail { () in
-            
+            DispatchQueue.main.async {
+                 self.descriptionTextView.text = AppDetailStruct.shared.detail.appDescription
+            }
         }
     }
     
