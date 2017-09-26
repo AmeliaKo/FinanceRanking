@@ -26,6 +26,7 @@ class HttpProtocolManager {
                     throw JSONError.NoData
                 }
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                //data 받아서 Feed 구조체에 맵핑 하는 부분
                 FeedSturcts.sharedInstance.feed = Mapper<Feed>().map(JSON: json["feed"] as! [String: Any])
                 
                 completion(true)
@@ -56,7 +57,7 @@ class HttpProtocolManager {
                 
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
                 let object =  json["results"] as! [[String:Any]]
-                
+                // data 받아서 Detail 구조체에 맵핑 하는 부분
                 AppDetailStruct.shared.detail = Mapper<Detail>().map(JSON:object[0])
                 
                 completion()
