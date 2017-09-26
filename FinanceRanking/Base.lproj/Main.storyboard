@@ -27,28 +27,32 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFb-4l-mah">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PfH-xn-bb9">
-                                                <rect key="frame" x="0.0" y="15" width="375" height="375"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="PfH-xn-bb9" secondAttribute="height" multiplier="1:1" id="fbP-un-lbQ"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Vff-BM-8ik"/>
+                                                </connections>
                                             </scrollView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rb9-mx-akG">
-                                                <rect key="frame" x="0.0" y="405" width="375" height="183.5"/>
+                                                <rect key="frame" x="16" y="390" width="343" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="rb9-mx-akG" secondAttribute="trailing" id="BtC-lG-0Sk"/>
                                             <constraint firstItem="PfH-xn-bb9" firstAttribute="leading" secondItem="uFb-4l-mah" secondAttribute="leading" id="CcP-jN-wTJ"/>
-                                            <constraint firstItem="rb9-mx-akG" firstAttribute="leading" secondItem="uFb-4l-mah" secondAttribute="leading" id="Q42-6a-VLi"/>
-                                            <constraint firstItem="PfH-xn-bb9" firstAttribute="top" secondItem="uFb-4l-mah" secondAttribute="top" constant="15" id="cjd-w2-XV7"/>
+                                            <constraint firstItem="rb9-mx-akG" firstAttribute="leading" secondItem="uFb-4l-mah" secondAttribute="leading" constant="16" id="PvZ-R7-Dhm"/>
+                                            <constraint firstAttribute="trailing" secondItem="rb9-mx-akG" secondAttribute="trailing" constant="16" id="QWN-2f-Xc2"/>
+                                            <constraint firstItem="PfH-xn-bb9" firstAttribute="top" secondItem="uFb-4l-mah" secondAttribute="top" id="cjd-w2-XV7"/>
                                             <constraint firstAttribute="trailing" secondItem="PfH-xn-bb9" secondAttribute="trailing" id="d40-Gr-5mg"/>
                                             <constraint firstAttribute="bottom" secondItem="rb9-mx-akG" secondAttribute="bottom" constant="15" id="vMT-lK-oKz"/>
                                             <constraint firstItem="rb9-mx-akG" firstAttribute="top" secondItem="PfH-xn-bb9" secondAttribute="bottom" constant="15" id="woS-2K-ew3"/>
@@ -81,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="222.1889055472264"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Root Table View Controller-->
         <scene sceneID="C0L-l9-tfr">
             <objects>
                 <tableViewController id="ntB-p0-An8" customClass="RootTableViewController" customModule="FinanceRanking" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +135,7 @@
                             <outlet property="delegate" destination="ntB-p0-An8" id="XZ2-Ra-Z0s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="aIM-tF-wVf"/>
+                    <navigationItem key="navigationItem" id="aIM-tF-wVf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZ0-F9-lmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

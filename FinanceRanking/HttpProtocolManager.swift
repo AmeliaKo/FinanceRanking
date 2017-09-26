@@ -12,6 +12,7 @@ import ObjectMapper
 class HttpProtocolManager {
     static let shared = HttpProtocolManager()
     
+    //무료 앱 순위 리스트 50개 서버에서 가져오는 부분
     func requestFinanceAppList(completion: @escaping (Bool) -> Void){
         let url = URL(string: "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json")
         
@@ -39,6 +40,7 @@ class HttpProtocolManager {
         dataTask.resume()
     }
     
+    // 테이블 뷰에서 셀 선택시 앱 디테일 정보 서버에서 받아 오는 부분
     func requestAppDetail(completion: @escaping () -> Void){
         let url = URL(string: "https://itunes.apple.com/lookup?id=\(FeedSturcts.sharedInstance.selectedId!)&country=kr")
         
